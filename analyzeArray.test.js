@@ -16,4 +16,10 @@ describe("analyzeArray", () => {
             3
         );
     });
+
+    test("returns the largest number from the input array", () => {
+        expect(analyzeArray.analyzeArray().max([44, 8, 462, 52, 16, 3])).toBe(
+            462
+        );
+    });
 });

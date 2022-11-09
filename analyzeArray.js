@@ -18,16 +18,26 @@ const analyzeArray = () => {
 
     function min(array) {
         array.sort(function (a, b) {
+            //sort ascending
             return a - b;
         });
 
         return array[0];
     }
 
+    function max(array) {
+        array.sort(function (a, b) {
+            return a - b;
+        });
+
+        return array[array.length - 1];
+    }
+
     return {
         length,
         average,
         min,
+        max,
     };
 };
 
