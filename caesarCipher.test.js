@@ -5,7 +5,13 @@ describe("caesarCipher", () => {
         expect(caesarCipher("zebra")).toMatch("ejgwf");
     });
 
-    test.skip("shifts letters across a-z (uppercase)", () => {
+    test("shifts letters across a-z (uppercase)", () => {
         expect(caesarCipher("Zebra")).toMatch("Ejgwf");
+    });
+
+    test("shifts letters and keeps the same punctuation", () => {
+        expect(caesarCipher("We-are_here to FIGHT!")).toMatch(
+            "Bj-fwj_mjwj yt KNLMY!"
+        );
     });
 });
