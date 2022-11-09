@@ -7,9 +7,13 @@ describe("analyzeArray", () => {
         ).toBe(8);
     });
 
-    // test.skip("capitalizes first character in a sentence", () => {
-    //     expect(analyzeArray("this should be capitalized")).toMatch(
-    //         "This should be capitalized"
-    //     );
-    // });
+    test("computes the average from the input array", () => {
+        expect(analyzeArray.analyzeArray().average([10, 15, 25, 30])).toBe(20);
+    });
+
+    test("returns the smallest number from the input array", () => {
+        expect(analyzeArray.analyzeArray().min([44, 8, 462, 52, 16, 3])).toBe(
+            3
+        );
+    });
 });
