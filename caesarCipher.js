@@ -13,11 +13,16 @@ function caesarCipher(string) {
             let letterAtArr = String.fromCharCode(letterPlus5);
             wordCiphered.push(letterAtArr);
         } else if (charAtArr >= 65 && charAtArr <= 90) {
+            //uppercase letters
             let letterPlus5 = charAtArr + 5;
             if (letterPlus5 > 90) {
                 letterPlus5 = letterPlus5 - 26;
             }
             let letterAtArr = String.fromCharCode(letterPlus5);
+            wordCiphered.push(letterAtArr);
+        } else {
+            //other characters
+            let letterAtArr = String.fromCharCode(charAtArr);
             wordCiphered.push(letterAtArr);
         }
     }
