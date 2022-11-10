@@ -33,11 +33,21 @@ const analyzeArray = () => {
         return array[array.length - 1];
     }
 
+    const object = (array) => {
+        return {
+            average: average(array),
+            min: min(array),
+            max: max(array),
+            length: length(array),
+        };
+    };
+
     return {
         length,
         average,
         min,
         max,
+        object,
     };
 };
 

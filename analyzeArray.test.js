@@ -22,4 +22,13 @@ describe("analyzeArray", () => {
             462
         );
     });
+
+    test("returns the object with properties of average, min, max, and length", () => {
+        expect(analyzeArray.analyzeArray().object([1, 8, 3, 4, 2, 6])).toEqual({
+            average: 4,
+            min: 1,
+            max: 8,
+            length: 6,
+        });
+    });
 });
